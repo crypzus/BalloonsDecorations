@@ -1,0 +1,168 @@
+/* ===== Estilos generales ===== */
+
+/* 1️⃣ Morado oscuro (#5B0E66) → Para fondo o títulos principales (elegancia y creatividad). 2️⃣ Lila suave (#B380C3) → Para detalles, secciones secundarias y fondos sutiles (suavidad y armonía). 3️⃣ Fucsia brillante (#E6007E) → Para botones, llamados a la acción y elementos destacados (energía y vitalidad). 4️⃣ Blanco puro (#FFFFFF) → Para mantener limpieza y contraste visual. 5️⃣ Gris claro (#E0E0E0) → Para contornos y fondo de secciones para equilibrar los colores vivos.
+
+Títulos grandes y llamados a la acción → Usa Playfair Display con fucsia (#E6007E) para destacar.
+
+Botones y navegación → Usa Quicksand con morado oscuro (#5B0E66) para elegancia.
+
+Texto general (descripciones de productos, info de tienda) → Usa Poppins con gris oscuro (#333). */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #e493c9;
+}
+
+header {
+    background-color: #ffc107;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Distribuye los elementos horizontalmente */
+    align-items: center;
+    /* Alinea verticalmente */
+    background-color: #FFD700;
+    /* Ajusta según tu diseño */
+    padding: 10px 20px;
+}
+
+#carrito-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+
+
+
+main,
+aside,
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+/* ===== Sección: Quiénes somos ===== */
+.quienesSomos {
+    text-align: center;
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== Imágenes generales y banners ===== */
+img {
+    max-width: 100%;
+    display: block;
+    margin: 15px auto;
+}
+
+.banner {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 15px auto;
+}
+
+/* ===== Botones generales ===== */
+button {
+    padding: 10px 20px;
+    background-color: #78027c;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e00ae7;
+}
+
+/* ===== Animaciones de mensaje ===== */
+#mensaje-exito {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.mensaje-error {
+    margin-top: 10px;
+    color: red;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.mensaje-oculto {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* ===== Secciones desplegables (FAQ, contacto, etc.) ===== */
+.oculto {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    padding: 0;
+}
+
+.visible {
+    max-height: 500px;
+    opacity: 1;
+    padding: 20px;
+    overflow: hidden;
+    transition: max-height 0.8s ease, opacity 0.5s ease;
+}
+
+/* ===== Responsive: Pantallas grandes ===== */
+@media (min-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    main {
+        display: block;
+        padding: 0 20px;
+    }
+
+    section,
+    article {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    aside {
+        background-color: #f8f9fa;
+        margin-top: 20px;
+        border-left: 4px solid #ffc107;
+    }
+}

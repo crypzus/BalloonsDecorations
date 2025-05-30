@@ -1,0 +1,86 @@
+.modal {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+
+
+
+#carrito-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espaciado entre los elementos */
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Estilizar el contador como círculo rojo */
+#contador-carrito {
+    display: none;
+    background: #78027c;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    width: 14px;
+    height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    position: absolute;
+    top: -1px;
+    right: 160px;
+}
+
+#cerrar-carrito,
+#ver-carrito {
+    padding: 5px 10px;
+    background-color: #78027c;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px;
+
+}
+
+#detalle-carrito {
+    max-height: 300px;
+    /* Limitar la altura */
+    overflow-y: auto;
+    /* Permitir desplazamiento vertical */
+    scrollbar-width: thin;
+    /* Para Firefox */
+    scrollbar-color: #666 #ddd;
+    /* Color del scrollbar */
+}
+
+
+
+#cerrar-carrito:hover {
+    background-color: #e00ae7;
+}
+
+
+
+#ver-carrito:hover {
+    background-color: #e00ae7;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos | BalloonsDecorations</title>
+    <link rel="stylesheet" href="css/productos.css" />
+    <link rel="stylesheet" href="css/carrito.css" />
+
+</head>
+
+<body>
+    <header>
+        <h1>BalloonsDecorations</h1>
+        <div class="navbar">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="proyectos.html">Servicios</a>
+                <a href="productos.html">Productos</a>
+            </nav>
+            <div id="carrito-container">
+                <h3>🛒 Carrito</h3>
+                <span id="contador-carrito">0</span>
+                <ul id="lista-carrito"></ul>
+                <button id="ver-carrito">Ver</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenido-principal">
+            <aside id="filtro-productos">
+                <h3>Nuestros Productos</h3>
+                <ul>
+                    <li>
+                        <button class="categoria">Globos</button>
+                        <ul class="subcategorias">
+                            <li><button class="subcategoria" data-categoria="Globos Latex basico">Basico</button>
+                            </li>
+                            <li><button class="subcategoria" data-categoria="Globos Latex Cromados">Cromados</button>
+                            </li>
+                            <li><button class="subcategoria" data-categoria="Globos Latex Perlados">Perlados</button>
+                            </li>
+                            <li><button class="subcategoria" data-categoria="Globos Latex Retros">Retros</button></li>
+                        </ul>
+                    </li>
+                    <li><button class="categoria" data-categoria="Cortinas Metalizadas">Cortinas Metalizadas</button>
+                    </li>
+                    <li><button class="categoria" data-categoria="Cajas Decoradas">Cajas Decoradas</button></li>
+                </ul>
+            </aside>
+
+            <section id="productos">
+
+                <div id="lista-productos" class="productos-container">
+                    <!-- Aquí se insertarán los productos con JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 BalloonsDecorations</p>
+    </footer>
+    <!-- modal del carrito  -->
+    <div id="carrito-modal" class="modal">
+        <div class="modal-content">
+            <h3>🛒 Resumen del Carrito</h3>
+            <ul id="detalle-carrito"></ul>
+            <button id="cerrar-carrito">Cerrar</button>
+        </div>
+    </div>
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+
+</html>

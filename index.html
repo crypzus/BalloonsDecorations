@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BalloonsDecorations</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>BalloonsDecorations</h1>
+        <div class="navbar">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="productos.html">Productos</a>
+                <a href="#" id="link-contacto">Contáctanos</a>
+            </nav>
+            <div id="carrito-container">
+                <h3>🛒 Carrito</h3>
+                <ul id="lista-carrito"></ul>
+                <button id="ver-carrito">Ver carrito</button>
+            </div>
+        </div>
+
+
+
+    </header>
+    <main>
+        <section>
+            <img src="img/_7fac7d61-1ae7-43f5-abb0-7390d418bfde.jpg" alt="banner" class="banner">
+            <h2>¿Quienes somos?</h2>
+            <p class="quienesSomos">"En BallonsDecorations, convertimos ideas en experiencias inolvidables. Nos apasiona
+                la creatividad y el
+                detalle, transformando cada celebración en un momento mágico. Desde decoraciones de eventos hasta
+                arreglos florales y manualidades únicas, cada creación está hecha con amor, porque creemos que todo lo
+                que se hace con el corazón, se convierte en pura magia."</p>
+
+        </section>
+
+
+        <h2 id="proyectos">Ultimos Proyectos</h2>
+        <button id="toggleProyectos"> Mostrar/Ocultar</button>
+        <article id="proyectos">
+            <p>Decoracion de 15 años.</p>
+            <p>Arreglos personalizados</p>
+        </article>
+    </main>
+
+    <aside>
+        <h3>Testimonios</h3>
+        <p>"Muy profesionales y responsables"</p>
+    </aside>
+
+    <footer>
+        <p>© 2023 BalloonsDecorations</p>
+        <button id="toggleContacto">Contáctanos</button>
+
+        <section id="formulario-contacto">
+            <h2>¿Te interesa una decoración?</h2>
+            <form id="contactForm">
+                <label for="nombre">Tu nombre:</label><br />
+                <input type="text" id="nombre" name="nombre" required /><br /><br />
+                <label for="telefono">Número de teléfono:</label><br />
+                <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 987654321" /><br /><br />
+
+                <label for="email">email</label><br />
+                <input type="email" id="email" name="email" required placeholder="Ej. @gmail.com" /><br /><br />
+                <label for="mensaje">¿Que necesitas?</label><br />
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br /><br />
+                <button type="submit">enviar</button>
+            </form>
+            <div id="mensaje-exito" class="mensaje-oculto"></div>
+        </section>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

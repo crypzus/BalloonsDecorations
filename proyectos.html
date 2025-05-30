@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos | BalloonsDecorations</title>
+    <link rel="stylesheet" href="css/proyectos.css" />
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="productos.html">Productos</a>
+            <a href="toggleContacto">Contactanos</a>
+        </nav>
+    </header>
+    <footer>
+        <p>© 2023 BalloonsDecorations</p>
+        <button id="toggleContacto">Contáctanos</button>
+
+        <section id="formulario-contacto">
+            <h2>¿Te interesa una decoración?</h2>
+            <form id="contactForm">
+                <label for="nombre">Tu nombre:</label><br />
+                <input type="text" id="nombre" name="nombre" required /><br /><br />
+                <label for="telefono">Número de teléfono:</label><br />
+                <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 987654321" /><br /><br />
+
+                <label for="email">email</label><br />
+                <input type="email" id="email" name="email" required placeholder="Ej. @gmail.com" /><br /><br />
+                <label for="mensaje">¿Que necesitas?</label><br />
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br /><br />
+                <button type="submit">enviar</button>
+            </form>
+            <div id="mensaje-exito" class="mensaje-oculto"></div>
+        </section>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
