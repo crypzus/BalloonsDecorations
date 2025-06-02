@@ -5,29 +5,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BalloonsDecorations</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link href="./output.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+
 </head>
 
-<body>
+<body class="custom-body">
     <header>
-        <h1>BalloonsDecorations</h1>
-        <div class="navbar">
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="proyectos.html">Proyectos</a>
-                <a href="productos.html">Productos</a>
-                <a href="#" id="link-contacto">Contáctanos</a>
+        <div class="navbar flex justify-between items-center p-4 bg-brandPrimary text-white">
+            <h1 class="custom-heading text-4xl font-bold">BalloonsDecorations</h1>
+            <nav class="flex space-x-6">
+                <a href="index.html" class="hover:text-brandAccent">Inicio</a>
+
+                <!-- Menú desplegable de Proyectos -->
+                <div class="relative group">
+                    <a href="proyectos.html" class="hover:text-brandAccent">Proyectos</a>
+                    <ul
+                        class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg mt-2 p-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Decoraciones</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Arreglos</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Manualidades</a></li>
+                    </ul>
+                </div>
+
+                <!-- Menú desplegable de Productos -->
+                <div class="relative group">
+                    <a href="productos.html" class="hover:text-brandAccent">Productos</a>
+                    <ul
+                        class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg mt-2 p-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Globos</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Cortinas</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Copas Acrílicas</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Vasos</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Cajas</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Vinil</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Peluches</a></li>
+                    </ul>
+                </div>
+
+                <a href="#" id="link-contacto" class="hover:text-brandAccent">Contáctanos</a>
             </nav>
+
             <div id="carrito-container">
                 <h3>🛒 Carrito</h3>
                 <ul id="lista-carrito"></ul>
-                <button id="ver-carrito">Ver carrito</button>
+                <button id="ver-carrito" class="custom-button">Ver carrito</button>
             </div>
         </div>
-
-
-
     </header>
+
+
+
+
     <main>
         <section>
             <img src="img/_7fac7d61-1ae7-43f5-abb0-7390d418bfde.jpg" alt="banner" class="banner">
@@ -42,7 +75,7 @@
 
 
         <h2 id="proyectos">Ultimos Proyectos</h2>
-        <button id="toggleProyectos"> Mostrar/Ocultar</button>
+        <button id="toggleProyectos" class="custom-button"> Mostrar/Ocultar</button>
         <article id="proyectos">
             <p>Decoracion de 15 años.</p>
             <p>Arreglos personalizados</p>
@@ -56,7 +89,7 @@
 
     <footer>
         <p>© 2023 BalloonsDecorations</p>
-        <button id="toggleContacto">Contáctanos</button>
+        <button id="toggleContacto" class="custom-button">Contáctanos</button>
 
         <section id="formulario-contacto">
             <h2>¿Te interesa una decoración?</h2>
@@ -76,6 +109,7 @@
         </section>
     </footer>
     <script src="js/index.js"></script>
+    <script src="js/navbar.js"></script>
 </body>
 
 </html>

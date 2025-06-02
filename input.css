@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* ===== Estilos generales =====*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .custom-body {
+        background-color: #FFFFFF;
+        color: #333;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar {
+        @apply flex justify-between items-center p-4 bg-brandPrimary text-white;
+    }
+
+    .custom-heading {
+        font-family: 'Playfair Display', serif;
+        color: #E6007E;
+    }
+
+    .custom-button {
+        background-color: #5B0E66;
+        color: white;
+        font-family: 'Quicksand', sans-serif;
+        padding: 12px 24px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    .custom-button:hover {
+        background-color: #E6007E;
+    }
+}
+
+
+
+
+/* ===== Estilos generales ===== */
+@layer components {
+    .bg-brandPrimary {
+        background-color: #5B0E66;
+    }
+
+    .bg-brandSecondary {
+        background-color: #B380C3;
+    }
+
+    .bg-brandAccent {
+        background-color: #E6007E;
+    }
+
+    .bg-brandWhite {
+        background-color: #FFFFFF;
+    }
+
+    .bg-brandGray {
+        background-color: #E0E0E0;
+    }
+}

@@ -1,0 +1,77 @@
+/*! tailwindcss v4.1.8 | MIT License | https://tailwindcss.com */
+.visible {
+  visibility: visible;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.hidden {
+  display: none;
+}
+.inline-block {
+  display: inline-block;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.group-hover\:block {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      display: block;
+    }
+  }
+}
+@layer components {
+  .custom-body {
+    background-color: #FFFFFF;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+  }
+  .custom-heading {
+    font-family: 'Playfair Display', serif;
+    color: #E6007E;
+  }
+  .custom-button {
+    background-color: #5B0E66;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  .custom-button:hover {
+    background-color: #E6007E;
+  }
+}
+@layer components {
+  .bg-brandPrimary {
+    background-color: #5B0E66;
+  }
+  .bg-brandSecondary {
+    background-color: #B380C3;
+  }
+  .bg-brandAccent {
+    background-color: #E6007E;
+  }
+  .bg-brandWhite {
+    background-color: #FFFFFF;
+  }
+  .bg-brandGray {
+    background-color: #E0E0E0;
+  }
+}
