@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BalloonsDecorations</title>
+    <title>Balloons \n Decorations</title>
     <!-- <link rel="stylesheet" href="css/style.css" /> -->
     <link href="./output.css" rel="stylesheet">
     <link
@@ -12,51 +12,63 @@
         rel="stylesheet">
 
 
+
 </head>
 
 <body class="custom-body">
-    <header>
-        <div class="navbar flex justify-between items-center p-4 bg-brandPrimary text-white">
-            <h1 class="custom-heading text-4xl font-bold">BalloonsDecorations</h1>
-            <nav class="flex space-x-6">
-                <a href="index.html" class="hover:text-brandAccent">Inicio</a>
+    <header class="bg-gradient-to-r from-purple-600 to-pink-400 shadow-lg">
+        <div class="navbar flex items-center justify-between px-6 py-4">
+            <h1 class="titulo">
+                Balloons <br> Decorations
+            </h1>
+
+            <nav class="flex space-x-6 text-white">
+                <a href="index.html" class="hover:text-[#d836ee] transition">Inicio</a>
 
                 <!-- Menú desplegable de Proyectos -->
-                <div class="relative group">
-                    <a href="proyectos.html" class="hover:text-brandAccent">Proyectos</a>
+                <div class="relative group menu-container">
+                    <button class="hover:text-[#d836ee] transition flex items-center menu-button">
+                        Proyectos▼
+                    </button>
                     <ul
-                        class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg mt-2 p-2 w-48">
-                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Decoraciones</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Arreglos</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Manualidades</a></li>
+                        class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg mt-2 p-2 w-48 menu">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Decoraciones</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Arreglos</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Manualidades</a></li>
                     </ul>
                 </div>
 
-                <!-- Menú desplegable de Productos -->
-                <div class="relative group">
-                    <a href="productos.html" class="hover:text-brandAccent">Productos</a>
-                    <ul
-                        class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg mt-2 p-2 w-48">
-                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Globos</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Cortinas</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Copas Acrílicas</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Vasos</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Cajas</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Vinil</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-brandGray">Peluches</a></li>
+                <div class="relative menu-container">
+                    <button class="menu-button hover:text-[#d836ee] transition flex items-center">
+                        Productos▼
+                    </button>
+
+                    <ul class=" menu absolute hidden bg-white text-gray-800 rounded-lg shadow-lg mt-2 p-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Globos</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Cortinas</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Copas Acrílicas</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Vasos</a></li>
                     </ul>
                 </div>
 
-                <a href="#" id="link-contacto" class="hover:text-brandAccent">Contáctanos</a>
+
+
+
+
+
+                <a href="#" id="link-contacto" class="hover:text-[#d836ee] transition">Contáctanos</a>
             </nav>
 
-            <div id="carrito-container">
-                <h3>🛒 Carrito</h3>
-                <ul id="lista-carrito"></ul>
-                <button id="ver-carrito" class="custom-button">Ver carrito</button>
+            <!-- Ícono del carrito -->
+            <div id="carrito-container" class="relative cursor-pointer text-white flex items-center">
+                🛒 <span class="font-semibold hover:text-[#d836ee]">Carrito</span>
+                <span id="contador-carrito" class="ml-2 bg-yellow-400 text-black rounded-full px-2 py-1 text-sm">
+                    0
+                </span>
             </div>
         </div>
     </header>
+
 
 
 

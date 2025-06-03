@@ -1,13 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700;900&family=Bubblegum+Sans:wght@400;700;900&family=Nunito:wght@400;700;900&family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap');
+@import "tailwindcss";
 
 
 
-/* ===== Estilos generales =====*/
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer components {
     .custom-body {
@@ -17,13 +12,50 @@
     }
 
     .navbar {
-        @apply flex justify-between items-center p-4 bg-brandPrimary text-white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: #ebb3f7;
+        color: white;
     }
 
-    .custom-heading {
-        font-family: 'Playfair Display', serif;
-        color: #E6007E;
+    .menu-desplegable {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
     }
+
+    .group:hover .menu-desplegable,
+    .menu-desplegable:hover {
+        display: block;
+        opacity: 1;
+    }
+
+
+
+    .titulo {
+        font-family: 'Nunito', sans-serif;
+        color: #5B0E66;
+        font-size: 32px;
+        /* Tamaño grande para impacto */
+        text-shadow: 3px 3px 6px rgba(7, 7, 7, 0.5),
+            /* Sombra oscura para profundidad */
+            -2px -2px 4px rgba(255, 255, 255, 0.3);
+        /* Sombra clara para brillo */
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 900;
+        -webkit-text-stroke: 1.5px #ee70ff;
+        line-height: 1.1;
+
+    }
+
+    .group-hover:block {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
 
     .custom-button {
         background-color: #5B0E66;
