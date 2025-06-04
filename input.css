@@ -16,21 +16,25 @@
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
-        background-color: #ebb3f7;
+        background-color: #eb9df5;
         color: white;
     }
 
-    .menu-desplegable {
-        display: none;
+    .menu {
         opacity: 0;
-        transition: opacity 0.3s ease-in-out;
+        transform: translateY(-10px);
+        visibility: hidden;
+        /* 🔥 Evita mostrar el menú sin perder la animación */
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
 
-    .group:hover .menu-desplegable,
-    .menu-desplegable:hover {
-        display: block;
+    .menu.visible {
         opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        /* 🔥 Se hace visible con animación fluida */
     }
+
 
 
 

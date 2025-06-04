@@ -1,3 +1,4 @@
+// codigo de mostrar y ocultar el menú al pasar el mouse
 document.addEventListener("DOMContentLoaded", () => {
   const menuContainers = document.querySelectorAll(".menu-container");
 
@@ -5,35 +6,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = container.querySelector(".menu-button");
     const menu = container.querySelector(".menu");
 
-    let isHoveringMenu = false;
-
     button.addEventListener("mouseenter", () => {
-      menu.classList.remove("hidden");
+      menu.classList.add("visible");
     });
 
     container.addEventListener("mouseenter", () => {
-      isHoveringMenu = true;
-      menu.classList.remove("hidden");
+      if (button.matches(":hover")) {
+        menu.classList.add("visible");
+      }
     });
 
     container.addEventListener("mouseleave", () => {
-      isHoveringMenu = false;
       setTimeout(() => {
-        if (!isHoveringMenu) {
-          menu.classList.add("hidden");
-        }
-      }, 100);
-    });
-
-    menu.addEventListener("mouseenter", () => {
-      isHoveringMenu = true;
-    });
-
-    menu.addEventListener("mouseleave", () => {
-      isHoveringMenu = false;
-      setTimeout(() => {
-        if (!isHoveringMenu) {
-          menu.classList.add("hidden");
+        if (!container.matches(":hover")) {
+          menu.classList.remove("visible");
         }
       }, 100);
     });
