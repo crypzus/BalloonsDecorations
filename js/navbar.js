@@ -26,6 +26,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// codigo para expandir el icono de buscar
+document.addEventListener("DOMContentLoaded", () => {
+  const searchIcon = document.querySelector(".contenerIconBuscar");
+  const searchInput = document.getElementById("search-input");
+
+  searchIcon.addEventListener("click", () => {
+    searchInput.classList.add("w-48", "opacity-100");
+    searchInput.focus();
+  });
+
+  searchInput.addEventListener("blur", () => {
+    if (searchInput.value === "") {
+      searchInput.classList.remove("w-48", "opacity-100");
+    }
+  });
+});
+
 // menú  funcione en dispositivos móviles
 // document.querySelectorAll(".group > a").forEach((item) => {
 //   item.addEventListener("click", function (event) {

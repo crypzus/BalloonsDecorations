@@ -75,8 +75,38 @@
     }
 }
 
+/* lineas en el navar */
+.link-hover::before,
+.link-hover::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: #d836ee;
+    width: 0;
+    transition: width 0.4s ease-in-out;
+}
 
+.link-hover::before {
+    top: -4px;
+    left: 0;
+}
 
+.link-hover::after {
+    bottom: -4px;
+    right: 0;
+}
+
+.link-hover:hover::before {
+    width: 100%;
+}
+
+.link-hover:hover::after {
+    width: 100%;
+}
+
+.shadow-text-navar {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
 /* ===== Estilos generales ===== */
 @layer components {
