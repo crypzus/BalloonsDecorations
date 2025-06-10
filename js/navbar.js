@@ -1,4 +1,4 @@
-// codigo de mostrar y ocultar el menú al pasar el mouse
+// codigo de mostrar y ocultar el menú al pasar el mouse en el navabar
 document.addEventListener("DOMContentLoaded", () => {
   const menuContainers = document.querySelectorAll(".menu-container");
 
@@ -39,6 +39,39 @@ document.addEventListener("DOMContentLoaded", () => {
   searchInput.addEventListener("blur", () => {
     if (searchInput.value === "") {
       searchInput.classList.remove("w-48", "opacity-100");
+    }
+  });
+});
+
+// codigo para aparecer el modal de inicio secion
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("dropdown-login");
+  const openModal = document.getElementById("seccion");
+  const closeModal = document.getElementById("dropdown-login");
+
+  openModal.addEventListener("click", () => {
+    modal.classList.remove("opacity-0", "pointer-events-none");
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!modal.contains(event.target) && event.target !== openModal) {
+      modal.classList.add("opacity-0", "pointer-events-none");
+    }
+  });
+});
+
+// funcion para que el ojo que sale el password oculte o muestre la misma
+document.addEventListener("DOMContentLoaded", () => {
+  const passwordInput = document.getElementById("password");
+  const togglePassword = document.getElementById("toggle-password");
+
+  togglePassword.addEventListener("click", () => {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      togglePassword.textContent = "visibility_off"; // Cambia el icono a "ojo cerrado"
+    } else {
+      passwordInput.type = "password";
+      togglePassword.textContent = "visibility"; // Vuelve al "ojo abierto"
     }
   });
 });

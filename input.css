@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700;900&family=Bubblegum+Sans:wght@400;700;900&family=Nunito:wght@400;700;900&family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap');
 @import "tailwindcss";
-
+@config "./tailwind.config.js";
 
 
 
 @layer components {
     .custom-body {
-        background-color: #FFFFFF;
+        background-color: #fad3ed;
         color: #333;
         font-family: 'Poppins', sans-serif;
     }
@@ -81,7 +81,7 @@
     content: "";
     position: absolute;
     height: 2px;
-    background: #d836ee;
+    background: #e203ff;
     width: 0;
     transition: width 0.4s ease-in-out;
 }
@@ -107,6 +107,9 @@
 .shadow-text-navar {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+
+
 
 /* ===== Estilos generales ===== */
 @layer components {

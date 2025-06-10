@@ -1,6 +1,13 @@
+/** @type {import('tailwindcss').Config} */
+// @ts-ignore
 module.exports = {
-  content: ["./**/*.html", "./**/*.css"],
+  content: ["./**/*.html", "./**/*.js"], // Archivos donde se usa Tailwind
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        playfair: ["Playfair Display", "serif"],
+      },
+    },
   },
+  plugins: [],
 };
