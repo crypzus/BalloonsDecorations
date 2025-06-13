@@ -10,11 +10,14 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;700&family=Poppins:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700;900&family=Bubblegum+Sans:wght@400;700;900&family=Nunito:wght@400;700;900&family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body class="custom-body">
-    <header class="navbar">
+    <header class="navbar fixed top-0 w-full z-50">
 
         <div class="flex  items-center gap-10">
             <h1 class="titulo">
@@ -27,7 +30,7 @@
                     Inicio</a>
 
                 <!-- Menú desplegable de Proyectos -->
-                <div class="relative group menu-container">
+                <div class="relative group menu-container z-50">
                     <button
                         class="hover:text-[#d836ee]  flex items-center menu-button font-bold transition relative link-hover uppercase tracking-widest shadow-text-navar">
                         Proyectos <span class="material-symbols-outlined">
@@ -36,18 +39,18 @@
                     </button>
                     <ul class="menu  absolute fade-in  bg-white text-gray-800 rounded-lg shadow-lg mt-2 p-2 w-48 ">
                         <li><a href="#"
-                                class="block px-4 py-2 hover:bg-[#eb9df5] hover:rounded-lg  hover:text-white">Decoraciones</a>
+                                class="block px-4 py-2 hover:bg-[#d836ee] hover:rounded-lg  hover:text-white">Decoraciones</a>
                         </li>
                         <li><a href="#"
-                                class="block px-4 py-2 hover:bg-[#eb9df5] hover:rounded-lg  hover:text-white">Arreglos</a>
+                                class="block px-4 py-2 hover:bg-[#d836ee] hover:rounded-lg  hover:text-white">Arreglos</a>
                         </li>
                         <li><a href="#"
-                                class="block px-4 py-2 hover:bg-[#eb9df5] hover:rounded-lg  hover:text-white">Manualidades</a>
+                                class="block px-4 py-2 hover:bg-[#d836ee] hover:rounded-lg  hover:text-white">Manualidades</a>
                         </li>
                     </ul>
                 </div>
                 <!-- Menú desplegable de producto -->
-                <div class="relative menu-container">
+                <div class="relative menu-container z-50">
                     <button
                         class="menu-button hover:text-[#d836ee] flex items-center font-bold transition relative link-hover uppercase tracking-widest shadow-text-navar">
                         Productos<span class="material-symbols-outlined ">
@@ -57,17 +60,17 @@
 
                     <ul class="menu absolute fade-in bg-white text-gray-800 rounded-lg shadow-lg mt-2 p-2 w-48">
                         <li><a href="#"
-                                class="block px-4 py-2 hover:bg-[#eb9df5] hover:rounded-lg hover:text-white">Globos</a>
+                                class="block px-4 py-2 hover:bg-[#d836ee] hover:rounded-lg hover:text-white">Globos</a>
                         </li>
                         <li><a href="#"
-                                class="block px-4 py-2 hover:bg-[#eb9df5] hover:rounded-lg hover:text-white">Cortinas</a>
+                                class="block px-4 py-2 hover:bg-[#d836ee] hover:rounded-lg hover:text-white">Cortinas</a>
                         </li>
                         <li><a href=" #"
-                                class="block px-4 py-2 hover:bg-[#eb9df5] hover:rounded-lg hover:text-white">Copas
+                                class="block px-4 py-2 hover:bg-[#d836ee] hover:rounded-lg hover:text-white">Copas
                                 Acrílicas</a>
                         </li>
                         <li><a href="#"
-                                class="block px-4 py-2 hover:bg-[#eb9df5] hover:rounded-lg hover:text-white">Vasos</a>
+                                class="block px-4 py-2 hover:bg-[#d836ee] hover:rounded-lg hover:text-white">Vasos</a>
                         </li>
                     </ul>
                 </div>
@@ -129,9 +132,11 @@
     <main>
         <!-- quienes somos  -->
         <section>
-            <h2 class="text-4xl font-playfair text-[#B5179E] text-center drop-shadow-lg">
+            <h2 class="mt-28 text-4xl font-playfair text-[#B5179E] text-center drop-shadow-lg">
+
                 ¿Quiénes somos?
             </h2>
+
             <p
                 class="bg-gradient-to-b from-pink-100 to-purple-200 text-[#6a0572] text-lg font-poppins rounded-xl shadow-lg p-6 text-center font-medium">
                 "En BallonsDecorations, convertimos ideas en experiencias inolvidables. Nos apasiona la creatividad y el
@@ -141,29 +146,58 @@
             </p>
         </section>
 
-
+        <!-- slider de ultimos proyectos -->
         <section class="text-center py-10">
             <h2 class="text-4xl font-playfair text-[#B5179E] text-center drop-shadow-lg mb-6">Últimos Proyectos</h2>
 
             <!-- Contenedor del slider -->
-            <div class="relative w-full max-w-4xl mx-auto overflow-hidden">
+            <div class="transition-transform duration-500 relative w-full max-w-4xl mx-auto overflow-hidden">
                 <button id="prev"
-                    class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-[#B5179E] text-white px-3 py-5 text-lg rounded-md hover:text-gray-800 hover:bg-[#d836ee] transition duration-300">
+                    class="z-30 absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#B5179E] text-white px-3 py-5 text-lg rounded-md hover:text-gray-800 hover:bg-[#d836ee] transition duration-300">
                     &#10094;
                 </button>
 
 
-                <div id="slider" class="flex transition-transform duration-500 ease-in-out will-change-transform">
+                <div id="slider" class="flex transition-transform duration-500 ease-in-out will-change-transform ">
                     <!-- Las imágenes se llenarán dinámicamente -->
                 </div>
 
                 <button id="next"
-                    class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#B5179E] text-white px-3 py-5 text-lg rounded-md hover:text-gray-800 hover:bg-[#d836ee] transition duration-300">
+                    class="z-30 absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#B5179E] text-white px-3 py-5 text-lg rounded-md hover:text-gray-800 hover:bg-[#d836ee] transition duration-300">
                     &#10095;
                 </button>
             </div>
         </section>
 
+        <!-- secion de productos -------------------------------------------------------------------------------------------------------------------------------->
+        <section class="text-center py-5">
+
+            <!-- Botones de selección de categoría -->
+            <div class="flex justify-stretch gap-2 ml-10 ">
+                <button data-seccion="productos"
+                    class="filter-btn bg-[#B5179E] text-white px-4 py-2  hover:bg-[#f389ff] hover:text-[#940C8B] transition duration-300 link-hover hover:font-bold  hover:shadow-text-navar tracking-widest z-20">
+                    Productos
+                </button>
+                <button data-seccion="Más vendidos"
+                    class="filter-btn bg-[#B5179E] text-white px-4 py-2   hover:bg-[#f389ff] hover:text-[#940C8B] transition duration-300 link-hover hover:font-bold  hover:shadow-text-navar tracking-widest z-20">
+                    Más vendidos
+                </button>
+                <button data-seccion="Populares"
+                    class="filter-btn bg-[#B5179E] text-white px-4 py-2   hover:bg-[#eeb5f5] hover:text-[#940C8B] transition duration-300 link-hover hover:font-bold  hover:shadow-text-navar tracking-widest z-20">
+                    Populares
+                </button>
+                <button data-seccion="Ofertas especiales"
+                    class="filter-btn bg-[#B5179E] text-white px-4 py-2  hover:bg-[#f389ff] hover:text-[#940C8B] transition duration-300 link-hover hover:font-bold  hover:shadow-text-navar tracking-widest z-20">
+                    Ofertas especiales
+                </button>
+                <div class="linea-decorativa"></div>
+            </div>
+
+            <!-- Contenedor de productos -->
+            <div id="productos-container" class="grid grid-cols-3 gap-6 max-w-5xl mx-auto py-10">
+                <!-- Los productos se cargarán dinámicamente con JavaScript -->
+            </div>
+        </section>
 
 
     </main>
@@ -282,6 +316,7 @@
     <script src="js/index.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/proyectos.js"></script>
+    <script src="js/productos.js"></script>
 </body>
 
 
